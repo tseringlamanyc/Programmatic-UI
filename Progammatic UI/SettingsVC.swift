@@ -33,8 +33,13 @@ class SettingsVC: UIViewController {
         // configure delegate and datasource of pickerview
         settingView.pickerView.delegate = self
         settingView.pickerView.dataSource = self
-        
-        let colorName = colors[0]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let indexUser = UserDefaults.standard.object(forKey: AppKey.indexKey) as? Int
+        settingView.pickerView.selectRow(indexUser!, inComponent: 0, animated: true)
+        let colorName = colors[indexUser!]
         view.backgroundColor = UIColor(named: colorName)
     }
 }
@@ -58,4 +63,5 @@ extension SettingsVC: UIPickerViewDataSource, UIPickerViewDelegate {
         UserDefaults.standard.set(colorName, forKey: AppKey.appColorKey)
         UserDefaults.standard.set(row, forKey: AppKey.indexKey)
     }
+    
 }
