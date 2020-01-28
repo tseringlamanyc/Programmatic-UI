@@ -9,6 +9,16 @@
 import UIKit
 
 class MainVC: UIViewController {
+    
+    private var mainView = MainView()
+    
+    // for programmatic UI implement and set up the view in loadView()
+    
+    // gets called before viewDidLoad ,, sets up initial view of the view controller
+    // dont do super in loadView
+    override func loadView() {
+        view = mainView 
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
