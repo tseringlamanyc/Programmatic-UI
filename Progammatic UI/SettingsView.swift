@@ -9,6 +9,11 @@
 import UIKit
 
 class SettingsView: UIView {
+    
+    public lazy var pickerView: UIPickerView = {
+       let pv = UIPickerView()
+       return pv
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -21,7 +26,17 @@ class SettingsView: UIView {
     }
     
     private func commonInit() {
+        setUpPickerView()
+    }
+    
+    private func setUpPickerView() {
+        addSubview(pickerView)
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            pickerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            pickerView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
     }
     
     
