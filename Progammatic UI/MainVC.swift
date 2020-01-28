@@ -24,6 +24,9 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         configureNavBar()
+        
+        // need action for button
+        mainView.resetButton.addTarget(self, action: #selector(resetColors(sender:)), for: .touchUpInside)
 }
     
     private func configureNavBar() {
@@ -44,6 +47,11 @@ class MainVC: UIViewController {
         //settingVC.modalTransitionStyle = .flipHorizontal
         
         print("show settings")
+    }
+    
+    @objc
+    private func resetColors(sender: UIButton) {
+        print("Button pressed")
     }
 
 

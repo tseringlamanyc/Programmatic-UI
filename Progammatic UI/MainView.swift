@@ -54,6 +54,7 @@ class MainView: UIView {
         addSubview(resetButton)
         resetButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            // .isActive = true 
             resetButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             resetButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 20)
         ])
