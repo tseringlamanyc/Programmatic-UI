@@ -14,6 +14,7 @@
 		520315EF23E0863A00FCBC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520315ED23E0863A00FCBC5A /* LaunchScreen.storyboard */; };
 		520315F723E08FCA00FCBC5A /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520315F623E08FCA00FCBC5A /* SettingsVC.swift */; };
 		520315F923E09ADF00FCBC5A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520315F823E09ADF00FCBC5A /* MainView.swift */; };
+		520315FB23E0BD7400FCBC5A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520315FA23E0BD7400FCBC5A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		520315F023E0863A00FCBC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520315F623E08FCA00FCBC5A /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		520315F823E09ADF00FCBC5A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		520315FA23E0BD7400FCBC5A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				520315E223E0863900FCBC5A /* AppDelegate.swift */,
 				520315E423E0863900FCBC5A /* SceneDelegate.swift */,
+				520315FA23E0BD7400FCBC5A /* SettingsView.swift */,
 				520315F623E08FCA00FCBC5A /* SettingsVC.swift */,
 				520315E623E0863900FCBC5A /* MainVC.swift */,
 				520315F823E09ADF00FCBC5A /* MainView.swift */,
@@ -143,6 +146,7 @@
 				520315E723E0863900FCBC5A /* MainVC.swift in Sources */,
 				520315F723E08FCA00FCBC5A /* SettingsVC.swift in Sources */,
 				520315E323E0863900FCBC5A /* AppDelegate.swift in Sources */,
+				520315FB23E0BD7400FCBC5A /* SettingsView.swift in Sources */,
 				520315F923E09ADF00FCBC5A /* MainView.swift in Sources */,
 				520315E523E0863900FCBC5A /* SceneDelegate.swift in Sources */,
 			);
