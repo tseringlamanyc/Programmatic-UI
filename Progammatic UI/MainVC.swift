@@ -22,12 +22,25 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemGray
         configureNavBar()
         
         // need action for button
         mainView.resetButton.addTarget(self, action: #selector(resetColors(sender:)), for: .touchUpInside)
 }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateAppColor()
+    }
+    
+    private func updateAppColor() {
+        if let colorName = UserDefaults.standard.object(forKey: AppKey.appColorKey) as? String {
+            view.backgroundColor = UIColor(named: colorName)
+        } else {
+            print("no background color saved")
+        }
+    }
     
     private func configureNavBar() {
         navigationItem.title = "Lets fighting loveeeeeee"

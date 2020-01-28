@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct AppKey {
+    static let appColorKey = "app color"
+    static let indexKey = "index key"
+}
+
+
 class SettingsVC: UIViewController {
     
     private var settingView = SettingsView()
@@ -21,12 +27,15 @@ class SettingsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemGray
         navigationItem.title = "Bawls"
         
         // configure delegate and datasource of pickerview
         settingView.pickerView.delegate = self
         settingView.pickerView.dataSource = self
+        
+        let colorName = colors[0]
+        view.backgroundColor = UIColor(named: colorName)
     }
 }
 
@@ -43,5 +52,10 @@ extension SettingsVC: UIPickerViewDataSource, UIPickerViewDelegate {
         return colors[row]
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let colorName = colors[row]
+        view.backgroundColor = UIColor(named: colorName)
+        UserDefaults.standard.set(colorName, forKey: AppKey.appColorKey)
+        UserDefaults.standard.set(row, forKey: AppKey.indexKey)
+    }
 }
